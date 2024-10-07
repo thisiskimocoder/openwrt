@@ -13,7 +13,6 @@
 /logs
 /feeds
 /feeds.conf
-/feeds.conf.default
 /files
 /target/linux/feeds
 /overlay
