@@ -5,8 +5,8 @@
 
 case $(board_name) in
   jdcloud,ax6600)
-		devmem 0x1016000 32 0x201
-    devmem 0x1016004 32 0x2
+	devmem 0x1016000 32 0x201
+    	devmem 0x1016004 32 0x2
 		;;
 esac
 
