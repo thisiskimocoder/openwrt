@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=qca-ssdk
-PKG_RELEASE:=3
+PKG_RELEASE:=4
 
 PKG_SOURCE_URL:=https://git.codelinaro.org/clo/qsdk/oss/lklm/qca-ssdk.git
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_DATE:=2024-06-13
-PKG_SOURCE_VERSION:=c451136ba69d51d60f770365b6d6d60ff2801998
+PKG_SOURCE_DATE:=2024-10-20
+PKG_SOURCE_VERSION:=3eb5d96a0ed6ec8a7ade8fb069fbf77d338a4648
 PKG_MIRROR_HASH:=4c54f2d77b5abeb96bddceb4a9eb58aa2c8fb12b58d5d666196224a35ac107dc
 
 PKG_FLAGS:=nonshared
@@ -60,6 +60,9 @@ ifeq ($(CONFIG_TARGET_SUBTARGET), "ipq60xx")
     MAKE_FLAGS+= CHIP_TYPE=CPPE
 endif
 
+ifeq ($(CONFIG_TARGET_SUBTARGET), "ipq50xx")
+    MAKE_FLAGS+= CHIP_TYPE=CPPE
+endif
 
 define Build/Compile
 	+$(MAKE) $(PKG_JOBS) $(MAKE_FLAGS) -C $(PKG_BUILD_DIR) $(LNX_CONFIG_OPTS)
