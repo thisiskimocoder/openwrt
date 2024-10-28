@@ -69,6 +69,6 @@
 		"https://mirror2.openwrt.org/sources"
 	],
         "@IMMORTALWRT": [
-                "https://sources-cdn.immortalwrt.org",
+                "https://sources-cdn.immortalwrt.org"
         ]
 }
